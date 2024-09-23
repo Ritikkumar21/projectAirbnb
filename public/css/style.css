@@ -241,3 +241,16 @@ input[type="url"] {
     background-color:#fe424d !important;
     border: none !important;
 }
+
+/* Show Page */
+.show-image{
+    height:30vh !important;
+} 
+.btns{
+    display: flex;
+} 
+.show-card{ 
+    padding-left: 0;
+    padding-right: 0;
+} 
+ 
