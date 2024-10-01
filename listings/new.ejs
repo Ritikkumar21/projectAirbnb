@@ -3,15 +3,15 @@
     <div class="row">
         <div class="col-8 offset-2">
         <h3>Create a New Listing</h3>
-    <form action="/listings" method="POST"> 
+    <form action="/listings" method="POST" novalidate class="needs-validation"> 
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
-            <input name="listing[title]" placeholder="enter title" type="text">
+            <input name="listing[title]" placeholder="enter title" type="text" required>
         </div>
        
         <div class="mb-3">
             <label for="discription"  class="form-label">Description</label>
-            <textarea name="listing[description]" placeholder="Enter Description"></textarea> 
+            <textarea name="listing[description]" placeholder="Enter Description" required></textarea> 
         </div>
 
         <div class="mb-3">
@@ -22,22 +22,22 @@
         <div class="row">
             <div class="mb-3 col-md-4">
                 <label for="price"  class="form-label">Enter Price</label>
-                <input name="listing[price]" placeholder="Enter Price" type="number">
+                <input name="listing[price]" placeholder="Enter Price" type="number" required>
             </div>
     
             <div class="mb-3 col-md-8">
                <label for="country"  class="form-label">Enter Country</label>
-               <input name="listing[country]" placeholder="enter country" type="text">
+               <input name="listing[country]" placeholder="enter country" type="text" required>
             </div>
         </div>
     
         
         <div class="mb-3">
             <label for="location"  class="form-label">Enter Location</label>
-            <input name="listing[location]" placeholder="enter location" type="text">
+            <input name="listing[location]" placeholder="enter location" type="text" required>
         </div>
         <button class="btn btn-dark mb-3 add-btn">Add</button>
     </form>
 </div>
 </div>
-</body>
+
