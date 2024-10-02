@@ -17,10 +17,9 @@
             </div>
 
             <div class="mb-3">
-                <label for="image" class="form-label">Image URL</label>
-                <input name="listing[image][url]" value="<%= listing.image.url %>" class="form-control" required>
-                <div class="invalid-feedback">Enter a valid URL.</div>
-            </div>
+                <label for="image" class="form-label">Image</label>                                                                                <input name="listing[image]" value="<%= listing.image %>" type="text"  class="form-control" required>
+             <div class="invalid-feedback">please enter a valid link for image</div>
+                </div>
 
             <div class="row">
                 <div class="mb-3 col-md-4">

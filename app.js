@@ -45,7 +45,7 @@ const validateListing=(req,res,next)=>{
     }
 };
 
-app.get("/listings", validateListing,wrapAsync(async(req,res)=>{
+app.get("/listings",wrapAsync(async(req,res)=>{
 const allListing=await Listing.find({});
 res.render("../listings/index.ejs",{allListing})
 }))
@@ -61,7 +61,7 @@ let{id}=req.params;
 }))
 
 // create route
-app.post("/listings",wrapAsync(async (req,res)=>{ 
+app.post("/listings",validateListing,wrapAsync(async (req,res)=>{ 
     let newListing=new Listing(req.body.listing);
     await newListing.save();
     res.redirect("/listings");

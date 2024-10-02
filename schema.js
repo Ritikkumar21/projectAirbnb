@@ -1,12 +1,12 @@
-const joi = require("joi");
+const Joi = require("joi");
 
-module.exports.listingSchema = joi.object({
-    listing: joi.object({
-        title: joi.string().required(),
-        description: joi.string().required(),
-        location: joi.string().required(),
-        country: joi.string().required(),
-        price: joi.number().required().min(0),
-        image: joi.string().allow("", null),
-    }).required(),
+module.exports.blogSchema = Joi.object({
+  blog: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().required(),
+    image: Joi.object({
+      url: Joi.string().allow("", null),
+      filename: Joi.string().allow("", null),
+    }),
+  }).required(),
 });
