@@ -242,9 +242,10 @@ input[type="url"] {
     border: none !important;
 }
 
+
 /* Show Page */
 .show-image{
-    height:30vh !important;
+    height:40vh !important;
 } 
 .btns{
     display: flex;
@@ -253,4 +254,4 @@ input[type="url"] {
     padding-left: 0;
     padding-right: 0;
 } 
- 
+
